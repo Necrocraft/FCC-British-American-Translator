@@ -13,3 +13,5 @@ American / British English Translator
 1. I can press the "Clear Input" button to remove all text from the text area and the `translated-sentence` `div`.
 1. All 20 unit tests are complete and passing. See `/tests/1_unit-tests.js` for the sentences you should write tests for.
 1. All 4 functional tests are complete and passing. See `/tests/2_functional-tests.js` for the functionality you should write tests for.
+
+My Glitch Project Url is "https://necro-brit-amer-translator.glitch.me"
