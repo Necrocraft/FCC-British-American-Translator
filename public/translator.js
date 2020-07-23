@@ -29,10 +29,12 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
     
 //   }
   let str = textArea.value;
+  let res;
    AtoB1.map((d, j) => {
-     let res = str.replace(new RegExp(d, "g"), americanOnly[d])
+     res = str.replace(new RegExp(d, "g"), americanOnly[d])
      console.log(res);
    })
+  console.log(res);
 })
 
 /* 
