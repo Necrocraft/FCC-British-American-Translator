@@ -19,7 +19,9 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
     for(let i = 0; i < sentenceArray.length; i++) {
       AtoB1.map((d, j) => {
         if(d === sentenceArray[i]) {
-          sentenceArray = sentenceArray.splice()
+          sentenceArray.splice(i, 1, americanOnly[d])
+          console.log(americanOnly[d]);
+          console.log(sentenceArray);
         }
       })
     }
