@@ -35,6 +35,9 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
        if(new RegExp(d, "g").test(str)) {
          res = str.replace(new RegExp(d, "g"), americanOnly[d])
        }
+       else {
+         res = str;
+       }
      });
     AtoB2.map((d, j) => {
        if(new RegExp(d, "g").test(str)) {
