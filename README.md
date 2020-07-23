@@ -1,4 +1,4 @@
-**freeCodeCamp** - Quality Assurance 5: American / British English Translator
+American / British English Translator
 ------
 
 ### User stories:
@@ -13,10 +13,3 @@
 1. I can press the "Clear Input" button to remove all text from the text area and the `translated-sentence` `div`.
 1. All 20 unit tests are complete and passing. See `/tests/1_unit-tests.js` for the sentences you should write tests for.
 1. All 4 functional tests are complete and passing. See `/tests/2_functional-tests.js` for the functionality you should write tests for.
-
-### Testing and additional notes
-
-* All logic can go into `public/translator.js`.
-* Create all of the unit/functional tests in `tests/1_unit-tests.js` and `tests/2_functional-tests.js`.
-* To run the tests on Glitch, set NODE_ENV to `test` without quotes.
-* To run the tests in the console, use the command `npm run test`. To open the Glitch console, first click "Tools" in the bottom left corner and then click "Terminal".
