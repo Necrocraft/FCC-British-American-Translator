@@ -28,13 +28,26 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
 //   } else if(option.value === 'british-to-american') {
     
 //   }
-  let str = textArea.value;
-  let res;
-   AtoB1.map((d, j) => {
-     res = str.replace(new RegExp(d, "g"), americanOnly[d])
-     console.log(res);
-   })
-  console.log(res);
+  if(option.value === 'american-to-british') {
+    let str = textArea.value;
+    let res;
+     AtoB1.map((d, j) => {
+       if(new RegExp(d, "g").test(str)) {
+         res = str.replace(new RegExp(d, "g"), americanOnly[d])
+       }
+     });
+    AtoB2.map((d, j) => {
+       if(new RegExp(d, "g").test(str)) {
+         res = str.replace(new RegExp(d, "g"), americanToBritishSpelling[d])
+       }
+     })
+    AtoB3.map((d, j) => {
+       if(new RegExp(d, "g").test(str)) {
+         res = str.replace(new RegExp(d, "g"), americanToBritishTitles[d])
+       }
+     })
+    console.log(res);
+  }
 })
 
 /* 
