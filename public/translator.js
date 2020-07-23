@@ -13,7 +13,20 @@ let BtoA2 = Object.keys(britishToAmericanTitles);
 
 let option = document.getElementById('locale-select');
 
-console.log(option.value);
+document.getElementById('translate-btn').addEventListener('click', (e) => {
+  let sentenceArray = textArea.value.split(" ");
+  if(option.value === 'american-to-british') {
+    for(let i = 0; i < sentenceArray.length; i++) {
+      AtoB1.map((d, j) => {
+        if(d === sentenceArray[i]) {
+          sentenceArray = sentenceArray.splice()
+        }
+      })
+    }
+  } else if(option.value === 'british-to-american') {
+    
+  }
+})
 
 /* 
   Export your functions for testing in Node.
