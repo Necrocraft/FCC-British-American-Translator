@@ -14,22 +14,12 @@ let BtoA2 = Object.keys(britishToAmericanTitles);
 let option = document.getElementById('locale-select');
 
 document.getElementById('translate-btn').addEventListener('click', (e) => {
-//   let sentenceArray = textArea.value.split(" ");
-//   if(option.value === 'american-to-british') {
-//     for(let i = 0; i < sentenceArray.length; i++) {
-//       AtoB1.map((d, j) => {
-//         if(d === sentenceArray[i]) {
-//           sentenceArray.splice(i, 1, americanOnly[d])
-//           console.log(americanOnly[d]);
-//           console.log(sentenceArray);
-//         }
-//       })
-//     }
-//   } else if(option.value === 'british-to-american') {
-    
-//   }
+      var element = document.getElementById("translated-sentence");
+      while (element.firstChild) {
+      element.removeChild(element.firstChild);
+      }
   if(option.value === 'american-to-british') {
-    let str = textArea.value;
+    let str = textArea.value.toLowerCase();
     let res;
      AtoB1.map((d, j) => {
        if(new RegExp(d, "g").test(str)) {
@@ -46,8 +36,13 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
          res = str.replace(new RegExp(d, "g"), americanToBritishTitles[d]);
        }
      })
-    let text = document.createTextNode(res);
-    document.getElementById("translated-sentence").appendChild(text);
+    if(res) {
+      let text = document.createTextNode(res);
+      document.getElementById("translated-sentence").appendChild(text);
+    } else {
+      let text = document.createTextNode("Everything looks good to me!");
+      document.getElementById("translated-sentence").appendChild(text);
+    }
     console.log(res);
   }
   else if(option.value === 'british-to-american') {
