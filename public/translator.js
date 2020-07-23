@@ -35,9 +35,6 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
        if(new RegExp(d, "g").test(str)) {
          res = str.replace(new RegExp(d, "g"), americanOnly[d])
        }
-       else {
-         res = str;
-       }
      });
     AtoB2.map((d, j) => {
        if(new RegExp(d, "g").test(str)) {
@@ -49,13 +46,15 @@ document.getElementById('translate-btn').addEventListener('click', (e) => {
          res = str.replace(new RegExp(d, "g"), americanToBritishTitles[d]);
        }
      })
+    let text = document.createTextNode(res);
+    document.getElementById("translated-sentence").appendChild(text);
     console.log(res);
   }
   else if(option.value === 'british-to-american') {
     let str = textArea.value;
     let res;
      BtoA1.map((d, j) => {
-       if(new RegExp(d, "g").test(str)) {
+       if(new RegExp(d, "gi").test(str)) {
          res = str.replace(new RegExp(d, "g"), britishOnly[d]);
        }
      });
